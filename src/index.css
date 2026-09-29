@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors Theme - African Heritage */
+  --color-deep-burgundy: #4a0e0e;
+  --color-blood-red: #8b1a1a;
+  --color-antique-gold: #d4a537;
+  --color-warm-cream: #f5ebd8;
+  --color-charcoal: #1a0a0a;
+  --color-crips-blue: #1e3a5f;
+  --color-royal-blue: #2851a3;
+  --color-muted-gold: #a67c28;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #1a0a0a;
+  color: #f5ebd8;
+  overflow-x: hidden;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+section[id] {
+  scroll-margin-top: 96px;
+}
+
+/* African circle pattern - matches book cover */
+.african-pattern {
+  background-image:
+    radial-gradient(
+      circle at 25% 25%,
+      rgba(212, 165, 55, 0.08) 0%,
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 75% 75%,
+      rgba(212, 165, 55, 0.08) 0%,
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(139, 26, 26, 0.15) 0%,
+      transparent 40%
+    );
+  background-size: 120px 120px;
+}
+
+/* Concentric circles pattern */
+.circle-pattern {
+  background-image: repeating-radial-gradient(
+    circle at 50% 50%,
+    transparent 0,
+    transparent 8px,
+    rgba(212, 165, 55, 0.06) 8px,
+    rgba(212, 165, 55, 0.06) 9px
+  );
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8b1a1a;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d4a537;
+}
+
+::selection {
+  background: #d4a537;
+  color: #1a0a0a;
+}
